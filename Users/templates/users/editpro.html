@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+{% extends 'users/base.html' %}
+{% block body_block %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+                <div class="col-4">
+
+<form method="post">
+    <div class="card bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header"><h1>Edit profile</h1>
+</div>
+  <div class="card-body">
+    <p class="card-text">  {% csrf_token%}
+    {{form.as_p}}
+    <input type="submit" value="Update"></p>
+  </div>
+</div>
+
+</form>
+    </div>
+        <div class="col-4"></div>
+
+        </div>
+    </div>
+{%endblock%}

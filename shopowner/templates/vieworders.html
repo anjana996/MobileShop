@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+
+{% extends 'bases.html' %}
+
+{% block body_block %}
+
+
+<div class="container">
+    <div class="row">
+        {% for order in orders  %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+          <h5 class="card-title">
+
+      {{order.mobile}}</h5>
+quantity:{{order.quantity}}<br><br>
+status:{{order.status}}
+<br><br>
+      <a href="{%url 'orderdetails' order.id%}" class="btn btn-primary">View details</a>
+
+  </div>
+</div>
+
+
+<hr>
+{% endfor %}
+    </div>
+</div>
+{% endblock %}
